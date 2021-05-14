@@ -35,7 +35,7 @@ exports.up = async function(knex) {
          .references('ingredient_id')
          .inTable('Ingredients')
          .onDelete('RESTRICT')
-      tbl.string
+      tbl.string('quantity').notNullable()
     })
 };
 
